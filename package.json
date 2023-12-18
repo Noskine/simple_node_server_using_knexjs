@@ -1,0 +1,25 @@
+{
+  "name": "simple_node_server_using_knexjs",
+  "version": "0.1.1",
+  "description": "Este servidor se conecta a um banco de dados para cadrastrar usuários, retornar dados, criar e listar postagens.",
+  "main": "./src/index.js",
+  "type": "module",
+  "scripts": {
+    "dev": "nodemon src/index.js",
+    "test": "test"
+  },
+  "repository": {
+    "type": "github",
+    "url": "github.com/Noskine/simple_node_server_using_knexjs"
+  },
+  "author": "Enikson Sonay",
+  "license": "MIT",
+  "dependencies": {
+    "dotenv": "^16.3.1",
+    "knex": "^3.1.0",
+    "pg": "^8.11.3"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.2"
+  }
+}
