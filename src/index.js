@@ -1,5 +1,5 @@
 import { log } from './utils/pino.js'
-import { app } from './app.js'
+import { app } from './utils/app.js'
 
 app.listen(
   3031,
