@@ -11,13 +11,16 @@ export default {
   development: {
     client: 'postgresql',
     connection: {
-      database: process.env.DB,
+      database: 'server-blog-api',
       user: 'root',
-      password: process.env.PASSWORD_DB
+      password: 'root'
     },
     migrations: {
       tableName: 'knex_migrations',
       directory: 'src/database/migrations'
+    },
+    seeds: {
+      directory: 'src/database/seeds'
     }
   },
 
@@ -40,16 +43,20 @@ export default {
   production: {
     client: 'postgresql',
     connection: {
-      database: 'my_db',
-      user: 'username',
-      password: 'password'
+      database: process.env.DB,
+      user: process.env.USER_DB,
+      password: process.env.PASSWORD_DB
     },
     pool: {
       min: 2,
       max: 10
     },
     migrations: {
-      tableName: 'knex_migrations'
+      tableName: 'knex_migrations',
+      directory: 'src/database/migrations'
+    },
+    seeds: {
+      directory: 'src/database/seeds'
     }
   }
 
