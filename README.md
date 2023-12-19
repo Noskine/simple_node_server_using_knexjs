@@ -8,5 +8,13 @@
 - Version: 0.1.1
 
 ## 🌎 | Clone project
-Para programadores que quiserem clonar e estudar ou até mesmo contribuir com esse projeto siga o `passo a passo`.
+Para programadores que quiserem clonar e estudar ou até mesmo contribuir com esse projeto siga o *passo a passo*.
+
+- Execute no bash o seguinte comando:
+
+`git clone git@github.com:Noskine/simple_node_server_using_knexjs.git`
+
+- Agora execute:
+
+`npm i || npm install`
 
