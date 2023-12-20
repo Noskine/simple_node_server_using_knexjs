@@ -9,7 +9,7 @@ config()
 export default {
 
   development: {
-    client: 'postgresql',
+    client: 'pg',
     connection: {
       database: 'server-blog-api',
       user: 'root',

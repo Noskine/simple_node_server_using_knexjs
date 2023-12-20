@@ -6,7 +6,7 @@
   "type": "module",
   "scripts": {
     "dev": "nodemon src/index.js",
-    "test": "test"
+    "test": "vitest --ui"
   },
   "repository": {
     "type": "github",
@@ -31,6 +31,7 @@
     "eslint-plugin-n": "^16.4.0",
     "eslint-plugin-promise": "^6.1.1",
     "nodemon": "^3.0.2",
-    "sqlite3": "^5.1.6"
+    "sqlite3": "^5.1.6",
+    "vitest": "^1.1.0"
   }
 }
