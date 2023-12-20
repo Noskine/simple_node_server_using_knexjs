@@ -18,3 +18,13 @@ Para programadores que quiserem clonar e estudar ou até mesmo contribuir com es
 
 `npm i || npm install`
 
+## 🤖 | Description of technologies
+
+### **Breve Descrição das Tecnologias Utilizadas no Projeto**
+
+O uso destas tecnologias visa demonstrar minhas habilidades com backend construídos com JavaScript, que foi a principal stack utilizada no meu curso técnico. A utilização do Knex foi pelo simples motivo de conseguir utilizar as migrations, não necessariamente optando por um **_ORM_** que tornaria a aplicação mais pesada e um pouco mais abstrata em relação à linguagem SQL. O Knex foi escolhido como substituto do Sequelize, que foi ensinado no IMD. Seria necessário testar a aplicação, e para isso decidi usar o **_Vitest_**, já que considero o Jest bastante robusto e, para um projeto pequeno, não seria o ideal.
+
+[![nodejs](https://img.shields.io/badge/Node.js-43853D?style=for-the-badge&logo=node.js&logoColor=white)]("#")
+[![express](https://img.shields.io/badge/Express.js-2b292f?style=for-the-badge)]()
+[![postgresql](https://img.shields.io/badge/PostgreSQL-316192?style=for-the-badge&logo=postgresql&logoColor=white)]()
+[![vitest](https://img.shields.io/badge/Vitest-2b292f?style=for-the-badge&logo=vite&logoColor=fac429)]()
