@@ -1,10 +1,8 @@
-import { hashSync, genSaltSync } from 'bcrypt'
+import { hash } from 'bcrypt'
 import { config } from 'dotenv'
 
 config()
 
-export function cryptHash (pass) {
-  const salt = genSaltSync(10)
-
-  return hashSync(pass, salt)
+export async function cryptHash (pass) {
+  return await hash(pass, 10)
 }

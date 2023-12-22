@@ -1,5 +1,4 @@
-import knex from '../utils/knex'
-import { log } from '../utils/pino'
+import knex from '../../utils/knex.js'
 
 export async function createUser ({ username, email, passwordHash }) {
   try {
@@ -9,9 +8,7 @@ export async function createUser ({ username, email, passwordHash }) {
       password_hash: passwordHash
     }).returning('*')
   } catch (err) {
-    return err
-  } finally {
-    log.info('CreateUser')
+    return new Error('algfo')
   }
 }
 
@@ -20,8 +17,6 @@ export async function userFindByPk ({ id }) {
     return await knex('users').select().where(id)
   } catch (err) {
     return err
-  } finally {
-    log.info('CreateUser')
   }
 }
 
@@ -30,8 +25,6 @@ export async function userUpdate ({ id, username, email, passwordHash }) {
     return await knex('users').select().where(id)
   } catch (err) {
     return err
-  } finally {
-    log.info('CreateUser')
   }
 }
 
@@ -40,7 +33,5 @@ export async function userDelete ({ id }) {
     return await knex('users').delete().where(id)
   } catch (err) {
     return err
-  } finally {
-    log.info('CreateUser')
   }
 }
