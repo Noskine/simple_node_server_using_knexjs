@@ -5,8 +5,10 @@
   "main": "./src/index.js",
   "type": "module",
   "scripts": {
+    "start": "node src/index.js",
     "dev": "nodemon src/index.js",
-    "test": "vitest --ui"
+    "test": "vitest",
+    "test:ui": "vitest --ui"
   },
   "repository": {
     "type": "github",
@@ -34,6 +36,7 @@
     "pino-http": "^8.6.0",
     "pino-http-print": "^3.1.0",
     "pino-pretty": "^10.3.0",
+    "supertest": "^6.3.3",
     "vitest": "^1.1.0"
   }
 }

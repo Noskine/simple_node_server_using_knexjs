@@ -8,6 +8,17 @@ class User {
       password_hash: data.passwordHash
     }).returning(['id', 'username'])
   }
+
+  async delete (id) {
+    try {
+      await knex('users')
+        .where({ id })
+        .del()
+        .returning('*')
+    } catch (error) {
+      return error
+    }
+  }
 }
 
-export { User }
+export default new User()
