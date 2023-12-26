@@ -9,6 +9,17 @@ class User {
     }).returning(['id', 'username'])
   }
 
+  async findUnique (id) {
+    try {
+      await knex('users')
+        .select(['username', 'email'])
+        .where({ id })
+        .returning('*')
+    } catch (error) {
+      return error
+    }
+  }
+
   async delete (id) {
     try {
       await knex('users')
