@@ -170,7 +170,7 @@
   dependencies:
     tinyspy "^2.2.0"
 
-"@vitest/ui@^1.0.0":
+"@vitest/ui@^1.0.0", "@vitest/ui@^1.1.0":
   version "1.1.0"
   resolved "https://registry.npmjs.org/@vitest/ui/-/ui-1.1.0.tgz"
   integrity sha512-7yU1QRFBplz0xJqcgt+agcbrNFdBmLo8UUppdKkFmYx+Ih0+yMYQOyr7kOB+YoggJY/p5ZzXxdbiOz7NBX2y+w==

@@ -1,10 +1,12 @@
 import { Router } from 'express'
-import { RegisterJSONValidator } from './app/middlewares/registerJsonValidator.js'
-import UserController from './app/controllers/userController.js'
+import { RegisterJSONValidator } from './app/middlewares/Validators.js'
+import userController from './app/controllers/userController.js'
 
 const routes = Router()
 
 routes.post('/user', RegisterJSONValidator)
-routes.post('/user', UserController.registerUser)
+routes.post('/user', userController.registerUser)
+
+routes.get('/profile/:id', userController.getProfile)
 
 export { routes }

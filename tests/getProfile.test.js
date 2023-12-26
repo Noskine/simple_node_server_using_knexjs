@@ -2,7 +2,7 @@ import { describe, expect, test } from 'vitest'
 import userService from '../src/app/services/userService.js'
 import User from '../src/app/database/models/User.js'
 
-describe('TEST resgisterRouter.test.js', async () => {
+describe('TEST getProfile.test.js', async () => {
   // eslint-disable-next-line no-unused-vars
   let id = ''
   const user = {
@@ -20,10 +20,17 @@ describe('TEST resgisterRouter.test.js', async () => {
     expect(res[0].id).toBeTypeOf('string')
   })
 
+  test('', async () => {
+    const res = await userService.getProfileService(id)
+
+    console.log(res)
+
+    expect(res).toBeTypeOf('object')
+  })
+
   test('Testing: whether it is possible to delete the user in the database', async () => {
     const res = await User.delete(id)
 
-    console.log(res)
-    expect(res)
+    expect(res).toEqual(undefined)
   })
 })

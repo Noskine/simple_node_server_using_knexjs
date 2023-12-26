@@ -14,7 +14,6 @@ class User {
       await knex('users')
         .select(['username', 'email'])
         .where({ id })
-        .returning('*')
     } catch (error) {
       return error
     }

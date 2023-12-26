@@ -15,6 +15,16 @@ class UserController {
       }
     }
   }
+
+  async getProfile (req, res) {
+    try {
+      const id = req.params.id
+
+      const data = await userService.getProfileService({ id })
+    } catch (error) {
+      res.status(error.code).json(error.message)
+    }
+  }
 }
 
 export default new UserController()
