@@ -16,7 +16,21 @@ Para programadores que quiserem clonar e estudar ou até mesmo contribuir com es
 
 - Agora execute:
 
-`npm i || npm install`
+`npm install` ou `yarn install`
+
+- Execute o anbiente de desenvolvimento:
+ 
+`npm run dev` ou `yarn dev`
+
+### 👌 | Banco de dados em desenvolvimento
+
+O banco de dados está configurado com o docker sem a necessidade de ter um sgdb instalado na máquina. estamos usando o postgresql. 
+
+Garanta que o docker esteja instalado corretamente na área: https://docs.docker.com/get-docker
+
+Procure pelo arquivo `docker-compose.yml` e configure da melhor forma que achar.
+
+após isso de um run: `docker compose up -d`;
 
 ## 🤖 | Description of technologies
 
