@@ -1,31 +1,28 @@
-import { RegisterErro } from '../../err/registerError.js'
 import userService from '../services/userService.js'
 
 class UserController {
-  async registerUser (req, res) {
-    try {
-      const json = req.body
+  registerUser (req, res) {
+    const json = req.body
 
-      const dataRegister = await userService.registerService(json)
-
-      res.status(201).json(dataRegister)
-    } catch (error) {
-      if (error instanceof RegisterErro) {
-        res.status(error.code).json(error.message)
-      }
-    }
+    userService.registerService(json)
+      .then((data) => {
+        res.status(201).json(data)
+      })
+      .catch((err) => {
+        res.status(err.code).json({ err: err.message })
+      })
   }
 
-  async getProfile (req, res) {
-    try {
-      const id = req.params.id
+  getProfile (req, res) {
+    const id = req.params.id
 
-      const data = await userService.getProfileService({ id })
-
-      res.json(data)
-    } catch (error) {
-      res.status(error.code).json(error.message)
-    }
+    userService.getProfileService({ id })
+      .then((data) => {
+        res.json(data)
+      })
+      .catch((err) => {
+        res.status(err.code).json({ err: err.message })
+      })
   }
 }
 

@@ -26,7 +26,7 @@ Para programadores que quiserem clonar e estudar ou até mesmo contribuir com es
 
 O banco de dados está configurado com o docker sem a necessidade de ter um sgdb instalado na máquina. estamos usando o postgresql. 
 
-Garanta que o docker esteja instalado corretamente na área: https://docs.docker.com/get-docker
+Garanta que o docker esteja instalado corretamente na máquina: https://docs.docker.com/get-docker
 
 Procure pelo arquivo `docker-compose.yml` e configure da melhor forma que achar.
 

@@ -1,41 +1,46 @@
 import { ProfileDoesNotExistError } from '../../err/profileDoesNotExistError.js'
 import { RegisterErro } from '../../err/registerError.js'
-import { cryptHash } from '../../utils/bcrypt.js'
+
 import User from '../database/models/User.js'
+import { cryptHash } from '../../utils/bcrypt.js'
 
 class UserService {
   async registerService ({ username, email, password }) {
-    try {
-      const passwordHash = await cryptHash(password)
+    const passwordHash = await cryptHash(password)
 
-      return await User.create({
-        username, email, passwordHash
-      })
-    } catch (error) {
+    const response = await User.create({
+      username, email, passwordHash
+    })
+
+    if (response instanceof Error) {
       throw new RegisterErro('Error in registration', 500)
     }
+
+    return response
   }
 
   async getProfileService ({ id }) {
-    try {
-      const res = await User.findUnique(id)
+    const res = await User.findUnique(id)
 
-      return res
-    } catch (error) {
-      return new ProfileDoesNotExistError('profile data not found')
+    if (res.length === 0) {
+      throw new ProfileDoesNotExistError('There is no user with this id')
     }
+
+    return res
   }
 
   async updateProfile ({ id, username, email }) {
-    try {
-      return await User.update({
-        id,
-        username,
-        email
-      })
-    } catch (error) {
-      return new ProfileDoesNotExistError('profile data not found')
+    const response = await User.update({
+      id,
+      username,
+      email
+    })
+
+    if (response instanceof Error) {
+      throw new Error('Internal Server Error!')
     }
+
+    return response
   }
 }
 
