@@ -20,11 +20,19 @@ class UserService {
     try {
       const res = await User.findUnique(id)
 
-      if (res == null || undefined) {
-        throw new Error()
-      }
-
       return res
+    } catch (error) {
+      return new ProfileDoesNotExistError('profile data not found')
+    }
+  }
+
+  async updateProfile ({ id, username, email }) {
+    try {
+      return await User.update({
+        id,
+        username,
+        email
+      })
     } catch (error) {
       return new ProfileDoesNotExistError('profile data not found')
     }
