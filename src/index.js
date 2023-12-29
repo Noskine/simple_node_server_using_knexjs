@@ -10,8 +10,8 @@ app.use(http)
 app.use('/api', routes)
 
 app.listen(
-  process.env.PORT,
+  process.env.PORT || 3031,
   () => {
-    log.info('Server is running! ' + process.env.PORT)
+    log.info('Server is running! ' + process.env.PORT || 3031)
   }
 )

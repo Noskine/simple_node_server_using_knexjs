@@ -41,6 +41,18 @@ class UserController {
         res.status(err.code).json({ err: err.message })
       })
   }
+
+  delete (req, res) {
+    const id = req.params.id
+
+    userService.deleteProfile({ id })
+      .then(() => {
+        res.status(202).json({ return: 'User deleted' })
+      })
+      .catch(err => {
+        res.status(err.code).json({ Erro: err.message })
+      })
+  }
 }
 
 export default new UserController()

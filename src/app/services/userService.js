@@ -42,6 +42,14 @@ class UserService {
 
     return response
   }
+
+  async deleteProfile ({ id }) {
+    const response = await User.delete(id)
+
+    if (!response) {
+      throw new RegisterErro('error when deleting user', 500)
+    }
+  }
 }
 
 export default new UserService()

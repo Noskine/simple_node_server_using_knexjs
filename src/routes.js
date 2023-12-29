@@ -9,6 +9,8 @@ routes.post('/user', userController.registerUser)
 
 routes.get('/profile/:id', userController.getProfile)
 
-routes.post('/profile/:id', userController.updateProfile)
+routes.put('/profile/:id', userController.updateProfile)
+
+routes.delete('/profile/:id', userController.delete)
 
 export { routes }
