@@ -37,7 +37,7 @@ class UserService {
     })
 
     if (response instanceof Error) {
-      throw new Error('Internal Server Error!')
+      throw new RegisterErro('Internal server error', 500)
     }
 
     return response

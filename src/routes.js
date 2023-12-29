@@ -9,4 +9,6 @@ routes.post('/user', userController.registerUser)
 
 routes.get('/profile/:id', userController.getProfile)
 
+routes.post('/profile/:id', userController.updateProfile)
+
 export { routes }
