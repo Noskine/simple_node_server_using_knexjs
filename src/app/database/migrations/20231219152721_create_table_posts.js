@@ -4,7 +4,7 @@
  */
 export const up = async (knex) => {
   await knex.schema.createTable('posts', (table) => {
-    table.uuid('id').primary().notNullable()
+    table.uuid('id').defaultTo(knex.fn.uuid()).primary()
     table.string('title').notNullable()
     table.text('text').notNullable()
   })
