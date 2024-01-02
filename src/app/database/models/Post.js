@@ -9,8 +9,8 @@ class Post {
 
   findAll () {
     return knex('posts')
-      .select()
-      .innerJoin('users', 'user.id', 'posts.user_id')
+      .select(['posts.id', 'posts.title', 'posts.text', 'users.username', 'users.email'])
+      .innerJoin('users', 'posts.user_id', 'users.id')
   }
 }
 

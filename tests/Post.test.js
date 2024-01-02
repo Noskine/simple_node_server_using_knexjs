@@ -16,4 +16,13 @@ describe('TEST User.test.js', async () => {
 
     expect(res[0]).toBeTypeOf('object')
   })
+
+  test('Testing: the relationship between tables in the database', async () => {
+    const res = await Post.findAll()
+
+    console.log('*'.repeat(50))
+    console.log(res)
+
+    expect(res[0]).toBeTypeOf('object')
+  })
 })
