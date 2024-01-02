@@ -1,6 +1,6 @@
 {
   "name": "simple_node_server_using_knexjs",
-  "version": "0.1.1",
+  "version": "0.1.2end of project",
   "description": "Este servidor se conecta a um banco de dados para cadrastrar usuários, retornar dados, criar e listar postagens.",
   "main": "./src/index.js",
   "type": "module",
