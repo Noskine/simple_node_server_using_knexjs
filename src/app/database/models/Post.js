@@ -12,6 +12,12 @@ class Post {
       .select(['posts.id', 'posts.title', 'posts.text', 'users.username', 'users.email'])
       .innerJoin('users', 'posts.user_id', 'users.id')
   }
+
+  delete ({ id }) {
+    return knex('posts')
+      .delete()
+      .where({ id })
+  }
 }
 
 export default new Post()
