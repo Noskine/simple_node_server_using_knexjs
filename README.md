@@ -5,7 +5,9 @@
 
  Obs: Este projeto tem a inicialmente a intenção de demonstrar a minha capacidade de trabalhar com o query builder "Knexjs". Futuramente posso subir novas atualizaçãoes para uma possivel api. 
 
-- Version: 0.1.1
+- Version: 0.1.2
+
+> o projeto se voltou para uma api de um simples blog. 
 
 ## 🌎 | Clone project
 Para programadores que quiserem clonar e estudar ou até mesmo contribuir com esse projeto siga o *passo a passo*.
