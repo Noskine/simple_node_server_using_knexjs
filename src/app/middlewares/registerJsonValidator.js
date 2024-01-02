@@ -1,7 +1,7 @@
 import Ajv from 'ajv'
 import addFormats from 'ajv-formats'
 import { RegisterSchemaValidator } from './schemas/registerValidatorSchema.js'
-import { ValidatorErro } from '../../err/validatiorError.js'
+import { ValidatorErro } from '../../erros/validatiorError.js'
 
 const ajv = new Ajv()
 addFormats(ajv)

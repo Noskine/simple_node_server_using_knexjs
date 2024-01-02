@@ -1,5 +1,5 @@
-import { ProfileDoesNotExistError } from '../../err/profileDoesNotExistError.js'
-import { RegisterErro } from '../../err/registerError.js'
+import { ProfileDoesNotExistError } from '../../erros/profileDoesNotExistError.js'
+import { RegisterErro } from '../../erros/registerError.js'
 
 import User from '../database/models/User.js'
 import { cryptHash } from '../../utils/bcrypt.js'
