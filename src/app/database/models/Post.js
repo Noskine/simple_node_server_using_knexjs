@@ -1,10 +1,16 @@
 import knex from '../../../utils/knex.js'
 
 class Post {
-  create () {
-    knex('posts')
-      .insert({})
-      .into()
+  create ({ title, text, userId }) {
+    return knex('posts')
+      .insert({ title, text, user_id: userId })
+      .returning('*')
+  }
+
+  findAll () {
+    return knex('posts')
+      .select()
+      .innerJoin('users', 'user.id', 'posts.user_id')
   }
 }
 
